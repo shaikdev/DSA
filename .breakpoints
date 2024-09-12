@@ -1,0 +1,36 @@
+{
+  "files": {
+    "binary_search.js": [
+      {
+        "id": "9ea85206-fe6c-4e20-a043-7edf95c6864f",
+        "line": 57,
+        "version": 1800,
+        "index": 1063
+      },
+      {
+        "id": "753882f8-7e28-45cc-b497-d8d03d0fb8da",
+        "line": 58,
+        "version": 1800,
+        "index": 1088
+      },
+      {
+        "id": "d5fbab3f-3130-4b2c-a474-c127fe94d52c",
+        "line": 59,
+        "version": 1800,
+        "index": 1104
+      },
+      {
+        "id": "57bcaae8-a439-4f1d-823e-543f16fc1e92",
+        "line": 60,
+        "version": 1800,
+        "index": 1135
+      },
+      {
+        "id": "cb7b53cb-e0fa-41ca-abec-52033aff0732",
+        "line": 61,
+        "version": 1800,
+        "index": 1173
+      }
+    ]
+  }
+}
