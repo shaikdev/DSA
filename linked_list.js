@@ -21,8 +21,8 @@ class ClassList {
     return this.size === 0;
   }
 
-  // prepand
-  prepand(value) {
+  // prepend
+  prepend(value) {
     const node = new Node(value);
     if (this.isEmpty()) {
       this.head = node;
