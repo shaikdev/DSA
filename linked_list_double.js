@@ -116,7 +116,7 @@ class ClassList {
 
 const list = new ClassList();
 
-list.prepand(10);
+list.prepend(10);
 list.append(20);
 list.append(40);
 list.print();
