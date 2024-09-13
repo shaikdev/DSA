@@ -55,7 +55,7 @@ class ClassList {
     }
     let prev = this.head;
     if (index === 0) {
-      this.prepand(value);
+      this.prepend(value);
       this.size++;
     } else {
       const node = new Node(value);
@@ -142,7 +142,7 @@ class ClassList {
 
 const list = new ClassList();
 
-list.prepand(1);
+list.prepend(1);
 list.append(2);
 list.append(4);
 list.insert(3, 2);

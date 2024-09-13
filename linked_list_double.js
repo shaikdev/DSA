@@ -13,8 +13,8 @@ class ClassList {
     this.size = 0;
   }
 
-  // prepand
-  prepand(value) {
+  // prepend
+  prepend(value) {
     const node = new Node(value);
     if (this.size === 0) {
       this.head = node;
@@ -83,7 +83,7 @@ class ClassList {
   insert(value, index) {
     const node = new Node(value);
     if (this.isEmpty() || index === 0) {
-      this.prepand(value);
+      this.prepend(value);
     } else if (this.size === index) {
       this.append(value);
     } else {

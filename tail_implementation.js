@@ -1,5 +1,5 @@
 class Node {
-  constuctor(value) {
+  constructor(value) {
     this.value = value;
     this.next = null;
   }
@@ -12,8 +12,8 @@ class ClassList {
     this.tail = null;
   }
 
-  // prepand
-  prepand(value) {
+  // prepend
+  prepend(value) {
     const node = new Node(value);
     if (this.size === 0) {
       this.head = node;
@@ -28,7 +28,7 @@ class ClassList {
   append(value) {
     const node = new Node(value);
     if (this.size === 0) {
-      this.prepand(node);
+      this.prepend(node);
     } else {
       this.tail.next = node;
       this.tail = node;
