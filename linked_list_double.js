@@ -31,7 +31,7 @@ class ClassList {
   append(value) {
     const node = new Node(value);
     if (this.size === 0) {
-      this.prepand(node);
+      this.prepend(node);
     } else {
       this.tail.next = node;
       node.prev = this.tail;
