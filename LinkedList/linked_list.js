@@ -130,6 +130,19 @@ class LinkedList {
     curr.next = node;
   }
 
+  reverse() {
+    let curr = this.head;
+    let prev = null;
+    let next = null;
+    while (curr !== null) {
+      next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    this.head = prev;
+  }
+
   print() {
     let node = "";
     let curr = this.head;
@@ -164,5 +177,7 @@ array.forEach((item) => list.add(item));
 // list.addBeforeHead(5);
 
 // list.addAfterTail(60)
+
+list.reverse();
 
 list.print();

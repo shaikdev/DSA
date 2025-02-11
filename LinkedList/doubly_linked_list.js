@@ -167,6 +167,20 @@ class DoublyLinkedList {
     }
   }
 
+  reverse() {
+    let curr = this.head;
+    let last = null;
+    while (curr !== null) {
+      last = curr.back;
+      curr.back = curr.next;
+      curr.next = last;
+      curr = curr.back;
+    }
+    if (last.back !== null) {
+      this.head = last.back;
+    }
+  }
+
   print() {
     let curr = this.head;
     let str = "";
@@ -195,4 +209,5 @@ arr.forEach((item) => list.add(item));
 // list.addBeforeKthElement(1,6)
 // list.beforeHead(2)
 // list.deleteBeforeNode(list.head.next.next.next.next);
+list.reverse();
 list.print();
