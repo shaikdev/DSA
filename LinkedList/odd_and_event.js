@@ -50,13 +50,13 @@ const oddEventList = (data) => {
     return data;
   }
   let odd = data;
-  let event = data.next;
+  let even = data.next;
   let evenHead = data.next;
-  while (event !== null && event.next !== null) {
+  while (even !== null && even.next !== null) {
     odd.next = odd.next.next;
-    event.next = event.next.next;
+    even.next = even.next.next;
     odd = odd.next;
-    event = event.next;
+    even = even.next;
   }
   odd.next = evenHead;
   return data;
