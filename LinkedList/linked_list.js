@@ -136,7 +136,7 @@ class LinkedList {
     let next = null;
     while (curr !== null) {
       next = curr.next;
-      curr.next = prev;
+      curr.next = prev; 
       prev = curr;
       curr = next;
     }
@@ -147,7 +147,7 @@ class LinkedList {
     let node = "";
     let curr = this.head;
     while (curr.next !== null) {
-      node += `${curr.value}, `;
+      node += `${curr.value} -> `;
       curr = curr.next;
     }
     node += `${curr.value}`;
@@ -159,7 +159,7 @@ class LinkedList {
 const array = [10, 20, 30, 40, 50];
 
 const list = new LinkedList();
-
+ 
 array.forEach((item) => list.add(item));
 
 // list.removeHead();

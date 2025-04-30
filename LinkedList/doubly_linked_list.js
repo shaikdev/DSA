@@ -185,7 +185,7 @@ class DoublyLinkedList {
     let curr = this.head;
     let str = "";
     while (curr.next !== null) {
-      str += `${curr.value},`;
+      str += `${curr.value} -> `;
       curr = curr.next;
     }
     str += `${curr.value}`;

@@ -45,10 +45,11 @@ class List {
   print() {
     let curr = this.head;
     let result = "";
-    while (curr !== null) {
+    while (curr.next !== null) {
       result += curr.value + " -> ";
       curr = curr.next;
     }
+    result += `${curr.value}`;
     return console.log(result);
   }
 }

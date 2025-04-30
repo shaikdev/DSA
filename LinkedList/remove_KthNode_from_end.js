@@ -1,6 +1,6 @@
-// TODO: Segregate even and odd nodes in a Linked List
-// Input: Linked list: 1->2->3->4->5
-// Output: 1->3->5->2->4
+// TODO: Remove Nth Node From End of List
+// Input: head = [1,2,3,4,5], n = 2
+// Output: [1,2,3,5]
 
 class Node {
   constructor(value) {
@@ -13,7 +13,6 @@ class LinkedList {
   constructor() {
     this.head = null;
   }
-
   add(value) {
     const node = new Node(value);
     if (this.head === null) {
@@ -27,16 +26,16 @@ class LinkedList {
       return this.head;
     }
   }
-
   print() {
+    let node = "";
     let curr = this.head;
-    let result = "";
     while (curr.next !== null) {
-      result += curr.value + " -> ";
+      node += `${curr.value} -> `;
       curr = curr.next;
     }
-    result += `${curr.value}`;
-    return console.log(result);
+    node += `${curr.value}`;
+    console.log(node);
+    return;
   }
 }
 
@@ -45,25 +44,28 @@ const list = new LinkedList();
 const array = [1, 2, 3, 4, 5];
 
 array.forEach((item) => list.add(item));
+// list.print();
+let head = list.head;
 
-const oddEventList = (data) => {
-  if (data === null || data.next === null) {
-    return data;
+const removeKthNodeFromEnd = (head, position) => {
+  let fastNode = head;
+  let slowNode = head;
+
+  for (let i = 0; i < position; i++) {
+    fastNode = fastNode.next;
   }
-  let odd = data;
-  let even = data.next;
-  let evenHead = data.next;
-  while (even !== null && even.next !== null) {
-    odd.next = odd.next.next;
-    even.next = even.next.next;
-    odd = odd.next;
-    even = even.next;
+  if (fastNode === null) {
+    return head.next;
   }
-  odd.next = evenHead;
-  return data;
+
+  while (fastNode.next !== null) {
+    fastNode = fastNode.next;
+    slowNode = slowNode.next;
+  }
+  slowNode.next = slowNode.next.next;
+  return head;
 };
 
-const data = oddEventList(list.head);
-
+const data = removeKthNodeFromEnd(head, 2);
 list.head = data;
 list.print();
