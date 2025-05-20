@@ -13,22 +13,22 @@ const leftRotateOnePlace = (array) => {
 
 // array left rotate by k
 const leftRotateByK = (array, k) => {
+  if (array.length === 0) return array;
+
   const r = k % array.length;
-  if (array.length === 0) return;
-  if (r > array.length) return;
-  let temp = [];
-  for (let i = 0; i < k; i++) {
-    temp.push(array[i]);
-  }
-  for (let i = 0; i < array.length; i++) {
-    array[i] = array[i + r];
+  if (r === 0) return array;
+
+  const temp = array.slice(0, r); // store first r elements
+
+  for (let i = r; i < array.length; i++) {
+    array[i - r] = array[i]; // shift elements to the left
   }
 
   for (let i = array.length - r; i < array.length; i++) {
-    array[i] = temp[i - array.length + r];
+    array[i] = temp[i - array.length + r]; // append stored elements
   }
 
   return array;
 };
 
-console.log(leftRotateByK([1, 2, 3, 4, 5, 6], 8));
+console.log(leftRotateByK([1, 2, 3, 4, 5, 6], 2));
