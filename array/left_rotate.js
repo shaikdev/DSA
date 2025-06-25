@@ -31,4 +31,18 @@ const leftRotateByK = (array, k) => {
   return array;
 };
 
-console.log(leftRotateByK([1, 2, 3, 4, 5, 6], 2));
+const rightRotate = (nums, k) => {
+  let r = k % nums.length;
+  if (r === 0) return nums;
+  if (nums.length === 0) return nums;
+  let temp = nums.slice(-r);
+  for (let i = nums.length - r - 1; i >= 0; i--) {
+    nums[i + r] = nums[i];
+  }
+  for (let i = 0; i < temp.length; i++) {
+    nums[i] = temp[i];
+  }
+  return nums
+};
+
+console.log(rightRotate([1, 2, 3, 4, 5, 6, 7], 3));

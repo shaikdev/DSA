@@ -1,6 +1,6 @@
 // TODO: Merge Sort
 
-const array = [3,4,2,1];
+const array = [3, 4, 2, 1];
 
 const mergeSort = (array, low, mid, high) => {
   let left = low,
