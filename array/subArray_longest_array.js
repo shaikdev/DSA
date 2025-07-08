@@ -43,7 +43,7 @@ const subArray = (array, k) => {
     if (sum === k) {
       max = Math.max(max, right - left + 1);
     }
-
+    
     right++;
     if (right < array.length) {
       sum = sum + array[right];

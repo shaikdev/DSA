@@ -13,4 +13,3 @@ const smallestNumber = (array) => {
 };
 
 console.log(smallestNumber([39, 50, 55, 67, 39]));
-
